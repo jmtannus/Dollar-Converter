@@ -7,14 +7,13 @@
 
   <body>
     <img src="./img/my-dolar.gif" alt="cofrinho de porco" />
-
     <h1>My Dolars</h1>
 
     <div>
       <input id="input-real" type="number" placeholder="Valor em Reais" />
       <input id="input-dolar" placeholder="Valor do Dólar" />
 
-      <p id="valor-final-dolar">$ 0</p>
+      <p id="dolares">$</p>
 
       <button onclick="calcularDolar()">Converter</button>
     </div>
@@ -77,7 +76,9 @@
 
       let resultado = real / dolar; // variavel guarda o valor do resultado
 
-      alert(resultado); // mostra na tela o resultado
+      dolares.innerHTML = "$ " + resultado; // insere o valor do resultado no nosso paragrafo
+
+      alert("O resultado é $" + resultado + " dólares"); // mostra na tela o resultado
     }
   </script>
 </html>
