@@ -1,22 +1,85 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <html lang="pt-br">
 
-    <title>My Dollar</title>
-</head>
+    <head>
+        <title>MyDolar</title>
+    </head>
+
+    <body>
+        <img src="./my-dolar.gif">
+        <h1>My Dolars</h1>
+
+        <div>
+
+            <input id="input-real" type="number" placeholder="Valor em Reais">
+            <input id="input-dolar" placeholder="Valor do Dólar">
+
+            <p id="valor-final-dolar">$ 0</p>
 
 
-<body>
-    <h1></h1>
-    <div>
-        <input type="number" placeholder="Valor em reais">
-        <input type="text">
+            <button onclick="calcularDolar()">Converter</button>
+        </div>
+    </body>
 
-        <p>$ 0</p>
+    <style>
+        body {
+            background-color: #323232;
+            text-align: center;
+        }
 
-        <button>Converter</button>
-    </div>
-</body>
+        img {
+            width: 70%;
+        }
+
+        h1 {
+            color: #cfff00;
+            font-size: 50px;
+        }
+
+        input {
+            width: 140px;
+            height: 30px;
+        }
+
+        #input-real {
+            border: 3px solid #cfff00;
+        }
+
+        #input-dolar {
+            border: 3px solid red;
+        }
+
+        p {
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        button {
+            height: 40px;
+            width: 150px;
+            font-size: 20px;
+            cursor: pointer;
+            border: 3px solid #cfff00;
+            border-radius: 10px;
+            background-color: #323232;
+            color: white;
+        }
+
+        button:hover {
+            color: #323232;
+            background-color: #cfff00;
+        }
+    </style>
+
+    <script>
+
+        function calcularDolar(){
+            let real = document.getElementById("input-real").value //variável guarda valor do real digitado
+            let dolar = document.getElementById("input-dolar").value // varialvel guarda valor do dolar digitado
+
+            let resultado = real / dolar // variavel guarda o valor do resultado
+
+            alert(resultado) // mostra na tela o resultado
+        }
+    </script>
 </html>
