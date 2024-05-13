@@ -1,84 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <title>MyDolar</title>
-  </head>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MyDolar</title>
+</head>
+</html>
 
-  <body>
-    <img src="./img/my-dolar.gif" alt="cofrinho de porco" />
-    <h1>My Dolars</h1>
+<body>
+  <img src="./img/my-dolar.gif" alt="cofrinho de porco" />
+  <h1>My Dolars</h1>
 
-    <div>
-      <input id="input-real" type="number" placeholder="Valor em Reais" />
-      <input id="input-dolar" placeholder="Valor do Dólar" />
+  <div>
+    <input id="input-real" type="number" placeholder="Valor em Reais" />
+    <input id="input-dolar" placeholder="Valor do Dólar" />
 
-      <p id="dolares">$</p>
+    <p id="dolares">$</p>
 
-      <button onclick="calcularDolar()">Converter</button>
-    </div>
-  </body>
+    <button onclick="calcularDolar()">Converter</button>
+  </div>
+</body>
 
-  <style>
-    body {
-      background-color: #323232;
-      text-align: center;
-    }
+<style>
+  body {
+    background-color: #323232;
+    text-align: center;
+  }
 
-    img {
-      width: 70%;
-    }
+  img {
+    width: 70%;
+  }
 
-    h1 {
-      color: #cfff00;
-      font-size: 50px;
-    }
+  h1 {
+    color: #cfff00;
+    font-size: 50px;
+  }
 
-    input {
-      width: 140px;
-      height: 30px;
-    }
+  input {
+    width: 140px;
+    height: 30px;
+  }
 
-    #input-real {
-      border: 3px solid #cfff00;
-    }
+  #input-real {
+    border: 3px solid #cfff00;
+  }
 
-    #input-dolar {
-      border: 3px solid red;
-    }
+  #input-dolar {
+    border: 3px solid red;
+  }
 
-    p {
-      font-weight: bold;
-      font-size: 25px;
-    }
+  p {
+    font-weight: bold;
+    font-size: 25px;
+  }
 
-    button {
-      height: 40px;
-      width: 150px;
-      font-size: 20px;
-      cursor: pointer;
-      border: 3px solid #cfff00;
-      border-radius: 10px;
-      background-color: #323232;
-      color: white;
-    }
+  button {
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 3px solid #cfff00;
+    border-radius: 10px;
+    background-color: #323232;
+    color: white;
+  }
 
-    button:hover {
-      color: #323232;
-      background-color: #cfff00;
-    }
-  </style>
+  button:hover {
+    color: #323232;
+    background-color: #cfff00;
+  }
+</style>
 
-  <script>
-    function calcularDolar() {
-      let real = document.getElementById("input-real").value; //variável guarda valor do real digitado
-      let dolar = document.getElementById("input-dolar").value; // varialvel guarda valor do dolar digitado
+<script>
+  function calcularDolar() {
+    let real = document.getElementById("input-real").value; //variável guarda valor do real digitado
+    let dolar = document.getElementById("input-dolar").value; // varialvel guarda valor do dolar digitado
 
-      let resultado = real / dolar; // variavel guarda o valor do resultado
+    let resultado = real / dolar; // variavel guarda o valor do resultado
 
-      dolares.innerHTML = "$ " + resultado; // insere o valor do resultado no nosso paragrafo
+    dolares.innerHTML = "$ " + resultado; // insere o valor do resultado no nosso paragrafo
 
-      alert("O resultado é $" + resultado + " dólares"); // mostra na tela o resultado
-    }
-  </script>
+    alert("O resultado é $" + resultado + " dólares"); // mostra na tela o resultado
+  }
+</script>
 </html>
